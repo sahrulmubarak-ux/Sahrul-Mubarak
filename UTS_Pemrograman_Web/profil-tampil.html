@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profil — Portfolio</title>
+  <link rel="stylesheet" href="css/bootstrap-grid.css" type="text/css">
+  <link rel="stylesheet" href="css/styles.css" type="text/css">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <style>
+    .no-sticky nav { position: static; }
+    body.no-sticky {
+      min-height: 100vh;
+      background: linear-gradient(135deg, #0D0D1A 0%, #1a0a2e 60%, #0D1A2A 100%);
+    }
+    .profil-page {
+      padding: 100px 0 60px; min-height: 100vh;
+      position: relative; overflow: hidden;
+    }
+    .profil-page::before {
+      content: ''; position: absolute;
+      width: 500px; height: 500px;
+      background: radial-gradient(circle, rgba(0,229,195,0.12) 0%, transparent 70%);
+      top: -100px; right: -100px; border-radius: 50%;
+      animation: blobFloat 8s ease-in-out infinite; pointer-events: none;
+    }
+    .page-badge {
+      display: inline-block; font-size: 10px; letter-spacing: 3px;
+      text-transform: uppercase; color: var(--accent-3);
+      border: 1px solid rgba(0,229,195,0.3); padding: 5px 14px;
+      border-radius: 20px; margin-bottom: 16px;
+      font-family: 'Space Mono', monospace;
+    }
+  </style>
+</head>
+<body class="no-sticky">
+
+  <nav>
+    <ul>
+      <li><a href="index.html#contact">contact</a></li>
+      <li><a href="index.html#works">works</a></li>
+      <li>experience</li>
+      <li class="empty"></li>
+      <li><a href="profil.html">profil</a></li>
+      <li><a href="https://www.instagram.com/zikra.id" target="_blank">instagram</a></li>
+      <li>linkedin</li>
+    </ul>
+  </nav>
+
+  <div class="profil-page">
+    <div class="container">
+      <div class="page-badge">✦ Hasil Profil</div>
+      <h1 style="font-size:52px; margin:0 0 8px;">Data Kamu</h1>
+      <p style="margin-bottom:40px;">Berikut data diri yang telah kamu masukkan.</p>
+
+      <div id="profilResult" class="result-card" style="max-width:560px;">
+        <p style="color:var(--text-muted); text-align:center; padding:20px 0;">
+          Belum ada data. <a href="profil.html" style="color:var(--accent-3);">Isi form profil</a> terlebih dahulu.
+        </p>
+      </div>
+
+      <a href="profil.html" class="button" style="margin-top:30px;">← Kembali ke Form</a>
+    </div>
+  </div>
+
+  <footer id="contact">
+    <h2>any questions?<br>find me here<br>
+      <a href="mailto:hello@Syhrull_m">hello@Syhrull_m</a>
+    </h2>
+    <p>Made with — Sahrul Mubarak 2026</p>
+  </footer>
+
+  <script src="javascript/js.js"></script>
+</body>
+</html>

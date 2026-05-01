@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Profil — Portfolio</title>
+  <link rel="stylesheet" href="css/bootstrap-grid.css" type="text/css">
+  <link rel="stylesheet" href="css/styles.css" type="text/css">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <style>
+    .no-sticky nav { position: static; }
+    body.no-sticky {
+      min-height: 100vh;
+      background: linear-gradient(135deg, #0D0D1A 0%, #1a0a2e 60%, #0D1A2A 100%);
+    }
+    .profil-page {
+      padding: 100px 0 60px; min-height: 100vh;
+      position: relative; overflow: hidden;
+    }
+    .profil-page::before {
+      content: ''; position: absolute;
+      width: 500px; height: 500px;
+      background: radial-gradient(circle, rgba(123,92,234,0.15) 0%, transparent 70%);
+      top: -100px; right: -100px; border-radius: 50%;
+      animation: blobFloat 8s ease-in-out infinite; pointer-events: none;
+    }
+    .page-badge {
+      display: inline-block; font-size: 10px; letter-spacing: 3px;
+      text-transform: uppercase; color: var(--accent-3);
+      border: 1px solid rgba(0,229,195,0.3); padding: 5px 14px;
+      border-radius: 20px; margin-bottom: 16px;
+      font-family: 'Space Mono', monospace;
+    }
+    .split-layout { display: flex; gap: 60px; align-items: flex-start; }
+    .form-side { flex: 1; }
+    .info-side { flex: 0 0 280px; }
+    .info-card {
+      background: var(--bg-card); border: 1px solid var(--border);
+      border-radius: 12px; padding: 28px;
+    }
+    .info-card h3 { font-family: 'Syne', sans-serif; font-size: 16px; color: var(--text-primary); margin: 0 0 16px; }
+    .info-item {
+      display: flex; align-items: center; gap: 12px;
+      padding: 10px 0; border-bottom: 1px solid rgba(123,92,234,0.1);
+      font-size: 12px; color: var(--text-muted);
+    }
+    .info-item:last-child { border-bottom: none; }
+    .info-icon {
+      width: 32px; height: 32px; border-radius: 8px;
+      background: rgba(123,92,234,0.15);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 14px; flex-shrink: 0;
+    }
+    .form-row-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    @media (max-width: 768px) {
+      .split-layout { flex-direction: column; }
+      .info-side { flex: unset; width: 100%; }
+      .form-row-2 { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body class="no-sticky">
+
+  <nav>
+    <ul>
+      <li><a href="index.html#contact">contact</a></li>
+      <li><a href="index.html#works">works</a></li>
+      <li>experience</li>
+      <li class="empty"></li>
+      <li><a href="profil.html">profil</a></li>
+      <li><a href="https://www.instagram.com/zikra.id" target="_blank">instagram</a></li>
+      <li>linkedin</li>
+    </ul>
+  </nav>
+
+  <div class="profil-page">
+    <div class="container">
+      <div style="margin-bottom:40px;">
+        <div class="page-badge">✦ Data Diri</div>
+        <h1 style="font-size:52px; margin:0 0 8px;">Form Profil</h1>
+        <p style="margin:0;">Isi data diri singkat di bawah ini, lalu tekan tombol simpan.</p>
+      </div>
+
+      <div class="split-layout">
+        <!-- Form -->
+        <div class="form-side">
+          <div class="form-wrapper">
+            <form id="profilForm">
+              <div class="form-row-2">
+                <div class="form-group">
+                  <label for="nim">NIM</label>
+                  <input type="text" id="nim" name="nim" placeholder="Contoh: 220101001" required>
+                </div>
+                <div class="form-group">
+                  <label for="nama">Nama Lengkap</label>
+                  <input type="text" id="nama" name="nama" placeholder="Nama kamu" required>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="alamat">Alamat</label>
+                <textarea id="alamat" name="alamat" rows="3" placeholder="Jalan, Kota, Provinsi" required></textarea>
+              </div>
+              <div class="form-row-2">
+                <div class="form-group">
+                  <label for="hobi">Hobi</label>
+                  <input type="text" id="hobi" name="hobi" placeholder="Contoh: Mendesain" required>
+                </div>
+                <div class="form-group">
+                  <label for="instagram">Instagram</label>
+                  <input type="text" id="instagram" name="instagram" placeholder="@username" required>
+                </div>
+              </div>
+              <button type="submit" class="button" style="margin-top:24px; width:100%; text-align:center;">
+                Simpan Profil →
+              </button>
+            </form>
+          </div>
+        </div>
+
+        <!-- Info Card -->
+        <div class="info-side">
+          <div class="info-card">
+            <h3>Kenapa isi ini?</h3>
+            <div class="info-item">
+              <div class="info-icon">🎓</div>
+              <span>Data NIM untuk identitas akademik kamu</span>
+            </div>
+            <div class="info-item">
+              <div class="info-icon">📍</div>
+              <span>Alamat untuk keperluan korespondensi</span>
+            </div>
+            <div class="info-item">
+              <div class="info-icon">🎨</div>
+              <span>Hobi mencerminkan kepribadian kreatifmu</span>
+            </div>
+            <div class="info-item">
+              <div class="info-icon">📱</div>
+              <span>Instagram untuk koneksi dan portfolio sosial</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer id="contact">
+    <h2>any questions?<br>find me here<br>
+      <a href="mailto:hello@zikra.id">hello@zikra.id</a>
+    </h2>
+    <p>Made with ❤️ — Andi Zikra 2026</p>
+  </footer>
+
+  <script src="javascript/js.js"></script>
+</body>
+</html>

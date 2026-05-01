@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio — Sahrul M</title>
+  <link rel="stylesheet" href="css/bootstrap-grid.css" type="text/css">
+  <link rel="stylesheet" href="css/styles.css" type="text/css">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <style>
+    .hero-badge {
+      display: inline-block;
+      font-size: 10px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--accent-3);
+      border: 1px solid rgba(0,229,195,0.3);
+      padding: 6px 16px;
+      border-radius: 20px;
+      margin-bottom: 20px;
+      animation: fadeInUp 0.8s ease both;
+      font-family: 'Space Mono', monospace;
+    }
+    header h1 { animation: fadeInUp 0.8s ease 0.2s both; }
+    header ul  { animation: fadeInUp 0.8s ease 0.4s both; }
+    header .button { animation: fadeInUp 0.8s ease 0.6s both; }
+    header figure { animation: fadeInUp 0.8s ease 0.3s both; }
+
+    .float-obj { position: absolute; border-radius: 50%; opacity: 0.5; pointer-events: none; }
+    .float-obj-1 { width:12px; height:12px; background:var(--accent-1); top:20%; right:15%; animation: floatDot 3s ease-in-out infinite; }
+    .float-obj-2 { width:8px;  height:8px;  background:var(--accent-3); top:60%; right:25%; animation: floatDot 4s ease-in-out infinite 1s; }
+    .float-obj-3 { width:16px; height:16px; background:var(--accent-4); top:35%; right:8%;  animation: floatDot 5s ease-in-out infinite 0.5s; border-radius:3px; transform:rotate(45deg); }
+    .float-obj-4 { width:6px;  height:6px;  background:var(--accent-2); top:75%; left:10%; animation: floatDot 3.5s ease-in-out infinite 2s; }
+
+    .section-label {
+      font-size: 10px; letter-spacing: 3px; text-transform: uppercase;
+      color: var(--accent-2); font-family: 'Space Mono', monospace;
+      margin-bottom: 12px; display: block;
+    }
+    .skill-section { background: var(--bg-primary); padding: 80px 20px; position: relative; overflow: hidden; }
+    .project figure img { transition: transform 0.5s ease, filter 0.5s ease; border-radius: 6px; }
+    .project figure img:hover { transform: scale(1.02); filter: saturate(1.3) brightness(1.05); }
+    .project-number {
+      font-family: 'Syne', sans-serif; font-size: 80px; font-weight: 800;
+      color: rgba(123,92,234,0.08); position: absolute; top: 20px; right: 40px;
+      line-height: 1; pointer-events: none; user-select: none;
+    }
+    footer .footer-tag {
+      display: inline-block; font-size: 10px; letter-spacing: 3px;
+      color: var(--accent-2); text-transform: uppercase; margin-bottom: 20px;
+      font-family: 'Space Mono', monospace;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <ul>
+      <li><a href="#contact">contact</a></li>
+      <li><a href="#works">works</a></li>
+      <li>experience</li>
+      <li class="empty"></li>
+      <li><a href="profil.html">profil</a></li>
+      <li><a href="https://www.instagram.com/Syhrull_m" target="_blank">instagram</a></li>
+      <li>linkedin</li>
+    </ul>
+  </nav>
+
+  <header>
+    <div class="grid-decoration"></div>
+    <div class="float-obj float-obj-1"></div>
+    <div class="float-obj float-obj-2"></div>
+    <div class="float-obj float-obj-3"></div>
+    <div class="float-obj float-obj-4"></div>
+    <div class="container">
+      <div class="row" style="align-items:center;">
+        <div class="col-sm">
+          <div class="hero-badge">✦ Available for Projects</div>
+          <h1>hi, i'm<br>Sahrul Mubarak</h1>
+          <ul>
+            <li>_Graphic &amp; UX Designer</li>
+            <li>_Graduated from Informatika University Islamic datokarama Palu</li>
+            <li>_8+ years of experience</li>
+            <li>_Collaborating with many successful startups</li>
+            <li>_Speaking at various conferences for designers</li>
+          </ul>
+          <a href="" class="button">add me on linkedin ↗</a>
+        </div>
+        <div class="col-sm">
+          <figure>
+            <img src="img/saya.jpeg" class="intro-img" alt="Sahrul — Designer">
+            <figcaption>Photo by team at anzistudio room</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="skill-section">
+    <div class="grid-decoration"></div>
+    <ul class="skill-list">
+      <li class="fade-in">01_graphic design</li>
+      <li class="fade-in">02_user experience</li>
+      <li class="fade-in">03_user interface design</li>
+      <li class="fade-in">04_design thinking</li>
+      <li class="fade-in">05_user research</li>
+    </ul>
+  </section>
+
+  <!-- PROJECT 1 -->
+  <section class="project blue fade-in" id="works" style="position:relative;">
+    <span class="project-number">01</span>
+    <div class="container">
+      <div class="row" style="align-items:center;">
+        <div class="col-sm">
+          <figure>
+            <img src="img/Game.jpeg" alt="Cosmetics Branding">
+            <figcaption class="right-alignment">Photo by José Alejandro Cuffia on Unsplash</figcaption>
+          </figure>
+        </div>
+        <div class="col-sm">
+          <span class="section-label">Branding / Identity</span>
+          <h2>Some good games<br>for entertainment</h2>
+          <p>Proyek pengembangan beberapa game banyak di sukai oleh anak muda yang sangat kompetitif.</p>
+          <div>
+            <span class="tag">Branding</span>
+            <span class="tag">Identity</span>
+            <span class="tag">Strategy</span>
+          </div>
+          <a href="detail.html" class="button">Read More →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECT 2 -->
+  <section class="project fade-in" style="position:relative;">
+    <span class="project-number">02</span>
+    <div class="container">
+      <div class="row" style="align-items:center;">
+        <div class="col-sm right-alignment">
+          <span class="section-label">UX Design / E-commerce</span>
+          <h2>user experience design<br>for E-commerce app</h2>
+          <p>Proyek desain UX inovatif yang mengubah analitik bisnis yang kompleks menjadi antarmuka digital yang intuitif dan mudah dipahami.</p>
+          <div>
+            <span class="tag">UX Design</span>
+            <span class="tag">e-commerce</span>
+            <span class="tag">Analytics</span>
+          </div>
+          <a href="detail2.html" class="button">Read More →</a>
+        </div>
+        <div class="col-sm">
+          <figure>
+            <img src="img/web.jpeg" alt="Dashboard App">
+            <figcaption>Photo by José Alejandro Cuffia on Unsplash</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECT 3 -->
+  <section class="project blue fade-in" style="position:relative;">
+    <span class="project-number">03</span>
+    <div class="container">
+      <div class="row" style="align-items:center;">
+        <div class="col-sm">
+          <figure>
+            <img src="img/computer.jpg" alt="iPad App for Artists">
+            <figcaption class="right-alignment">Photo by José Alejandro Cuffia on Unsplash</figcaption>
+          </figure>
+        </div>
+        <div class="col-sm">
+          <span class="section-label">Mobile / Creative Tools</span>
+          <h2>computer app<br>for the artists</h2>
+          <p>Solusi digital kreatif yang dirancang untuk memberdayakan seniman dengan platform kreatif canggih dan serbaguna.</p>
+          <div>
+            <span class="tag">computer</span>
+            <span class="tag">Mobile App</span>
+            <span class="tag">Creative</span>
+          </div>
+          <a href="detail3.html" class="button">Read More →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer id="contact">
+    <div class="footer-tag">✦ Let's Connect</div>
+    <h2>any questions?<br>find me here<br>
+      <a href="mailto:hello@Sahrul.id">hello@Sahrul.id</a>
+    </h2>
+    <p>Made with  — Sahrul Mubarak 2026</p>
+  </footer>
+
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
